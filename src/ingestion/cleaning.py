@@ -30,16 +30,22 @@ def build_clean_dataframe(records: list[PaperRecord], run_date: datetime) -> pd.
 
     # 1. Drop missing mandatory fields
     # Ensure they are not empty strings or None
+    before_null = len(df)
     df = df.replace(r"^\s*$", None, regex=True)
     df = df.dropna(subset=["paper_id", "title", "summary", "published"])
+    logger.info("Dropped %d records due to missing mandatory fields.", before_null - len(df))
 
     # 2. Drop duplicates on paper_id
+    before_dedupe = len(df)
     df = df.drop_duplicates(subset=["paper_id"], keep="first")
+    logger.info("Dropped %d duplicate records based on paper_id.", before_dedupe - len(df))
 
     # 3. Handle Dates and age_days
     # Convert 'published' to datetime
+    before_date = len(df)
     df["published_dt"] = pd.to_datetime(df["published"], errors="coerce")
     df = df.dropna(subset=["published_dt"])
+    logger.info("Dropped %d records due to invalid published dates.", before_date - len(df))
     
     # Calculate age_days
     # run_date is datetime, we take .date() or normalize
@@ -47,7 +53,9 @@ def build_clean_dataframe(records: list[PaperRecord], run_date: datetime) -> pd.
     df["age_days"] = (run_date_norm - df["published_dt"]).dt.days
     
     # Filter negative age_days (future dates)
+    before_future = len(df)
     df = df[df["age_days"] >= 0].copy()
+    logger.info("Dropped %d records with future dates (age_days < 0).", before_future - len(df))
 
     # 4. Helper Columns
     df["authors_joined"] = df["authors"].apply(lambda x: ", ".join(x) if isinstance(x, list) else "")
