@@ -19,8 +19,8 @@
 | Module/deliverable | File/hàm phụ trách | Input nhận vào | Output bàn giao  | Trạng thái                                 |
 | ------------------ | --------------------- | ---------------- | ----------------- | -------------------------------------------- |
 | Semantic Search (Vector Index) | `src/retrieval/index.py` (LocalEmbeddingIndex) | Data clean JSON (`papers_clean.json`) | ChromaDB collections (`papers-baseline`, `papers-corrupted`, `papers-repaired`) và manifest JSON | Hoàn thành |
-| Agent LLM | `src/retrieval/agent.py` và `llm.py` | Câu hỏi truy vấn và Index tìm kiếm | Câu trả lời sinh ra từ văn bản (Agent) | Hoàn thành |
-| Validation Scripts | `script/cp2_role3.py` & `script/cp5_cp6_role3.py` | Data từ 3 trạng thái của Role 2 | Log kết quả tìm kiếm và Agent QA | Hoàn thành |
+| Agent LLM | `src/retrieval/agent.py` và `llm.py` | Câu hỏi truy vấn và Index tìm kiếm | Câu trả lời sinh ra từ văn bản (Agent) | Chưa chạy được toàn trình (Vướng Blocker) |
+| Validation Scripts | `script/cp2_role3.py` & `script/cp5_cp6_role3.py` | Data từ 3 trạng thái của Role 2 | Log kết quả tìm kiếm và Agent QA | Một phần (Thử nghiệm Index pass, Agent bị block) |
 
 ### Việc hỗ trợ ngoài phạm vi chính
 
@@ -87,10 +87,13 @@ uv run python script/cp5_cp6_role3.py
 
 - **Triệu chứng/lỗi nguyên văn:** `langchain_google_genai.chat_models.ChatGoogleGenerativeAIError: Error calling model 'gemini-2.0-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED`
 - **Lệnh hoặc bước tái hiện:** `uv run python script/cp2_role3.py` (Lúc test Agent LLM)
-- **Nguyên nhân gốc:** Quota giới hạn Free-tier của API Key Gemini.
-- **Cách xử lý:** Đây là rào cản từ phía hệ thống API bên ngoài (Billing). Đối với code của Role 3, LLM Agent đã được chứng minh là thiết lập đúng.
-- **Cách xác minh sau khi sửa:** (Đang đợi nạp thêm Key mới). Việc tạo index retrieval (Vector DB) vẫn hoạt động 100% chuẩn xác.
-- **Điều học được:** Khi làm hệ thống RAG cần tính toán cẩn thận API Rate limits và thiết kế fall-back (như đổi sang provider OLLAMA khi Gemini hết hạn mức).
+- **Nguyên nhân gốc:** Quota giới hạn Free-tier của API Key Gemini đã bị vượt quá do gọi request liên tục hoặc đã hết hạn mức.
+- **Cách xử lý (Tạm thời):** Tạm thời tắt hoặc bypass phần gọi LLM sinh text, chỉ verify đến bước Retrieval (Vector Search) trả về top_K hợp lệ.
+
+Do lỗi này thuộc về Billing của provider và chưa xử lý xong hoàn toàn:
+- **Phạm vi bị ảnh hưởng:** Toàn bộ phần sinh câu trả lời của Agent QA và các module Evaluation (Role 4) sử dụng LLM-as-a-judge.
+- **Những gì đã loại trừ:** Đã loại trừ nguyên nhân sai code logic (vì LLM client đã khởi tạo thành công), loại trừ nguyên nhân sai API endpoint.
+- **Bước tiếp theo:** Thay thế API key mới có đủ quota, hoặc cấu hình đổi sang mô hình Local (như Ollama) trong `.env` để chạy offline không phụ thuộc rate limit.
 
 ## 7. Hiểu biết về luồng end-to-end
 
