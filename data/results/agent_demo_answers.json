@@ -1,0 +1,17 @@
+[
+  {
+    "question": "What is the summary of the paper 'Retrieval\u2010Augmented Generation for Large Language Models: Evolution, Architectures, Applications, and Challenges (2020\u20132025)'?",
+    "ground_truth": "ABSTRACT Large language models (LLMs) generate fluent text but remain vulnerable to hallucinations, outdated knowledge, weak provenance, and costly model updates in knowledge\u2010intensive settings.",
+    "agent_answer": "The paper titled \"Retrieval\u2010Augmented Generation for Large Language Models: Evolution, Architectures, Applications, and Challenges (2020\u20132025)\" provides a comprehensive review of the advancements in retrieval-augmented generation (RAG) techniques for large language models (LLMs). It highlights the limitations of LLMs, such as hallucinations, outdated knowledge, and the challenges of costly model updates in knowledge-intensive applications. \n\nThe review synthesizes findings from 91 studies published between January 2020 and December 2025, tracing the evolution of RAG from early retrieve-then-generate pipelines to a more complex design space that includes various retrieval methods (sparse, dense, hybrid), multi-stage reranking, evidence fusion, and more. It discusses how different factors like retrieval granularity, indexing, and integration of retriever and generator impact performance metrics such as recall, precision, and robustness.\n\nThe paper also addresses the specific requirements of different domains, such as healthcare, legal, enterprise, and educational systems, emphasizing the need for evidence quality, privacy, and authoritative sources. It identifies evaluation as a significant challenge, noting that traditional metrics may not fully capture the quality of retrieval and the effectiveness of RAG systems. The authors advocate for reproducibility in reporting and propose RAG Cards to standardize evaluation practices while outlining future research directions for developing secure, efficient, and transparent RAG systems."
+  },
+  {
+    "question": "Who authored the paper 'Retrieval\u2010Augmented Generation for Large Language Models: Evolution, Architectures, Applications, and Challenges (2020\u20132025)'?",
+    "ground_truth": "Arman Rasool Faridi, Faraz Masood, Keshvi, Tabassum Yunus",
+    "agent_answer": "The paper titled \"Retrieval\u2010Augmented Generation for Large Language Models: Evolution, Architectures, Applications, and Challenges (2020\u20132025)\" was authored by Arman Rasool Faridi, Faraz Masood, Keshvi, and Tabassum Yunus."
+  },
+  {
+    "question": "When was the paper 'Retrieval\u2010Augmented Generation for Large Language Models: Evolution, Architectures, Applications, and Challenges (2020\u20132025)' published?",
+    "ground_truth": "2026-08-05",
+    "agent_answer": "The paper titled \"Retrieval\u2010Augmented Generation for Large Language Models: Evolution, Architectures, Applications, and Challenges (2020\u20132025)\" was published in 2023."
+  }
+]

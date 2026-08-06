@@ -52,7 +52,9 @@ class Settings:
     ollama_base_url: str
     custom_llm_api_key: str | None
     custom_llm_base_url: str | None
+    embedding_provider: str
     embedding_model: str
+    embedding_dimensions: int
     baseline_collection_name: str
     corrupted_collection_name: str
     repaired_collection_name: str
@@ -108,6 +110,16 @@ def load_settings(project_dir: Path | None = None) -> Settings:
         comparison_report=data_dir / "reports" / "corruption_report.md",
     )
 
+    # Embedding backend: "gemini" | "openai" (goi API) hoac "minilm" (local, offline).
+    embedding_provider = os.getenv("EMBEDDING_PROVIDER", "gemini").strip().lower()
+    default_embedding_models = {
+        "gemini": "models/gemini-embedding-001",
+        "openai": "text-embedding-3-small",
+    }
+    default_embedding_model = default_embedding_models.get(
+        embedding_provider, "sentence-transformers/all-MiniLM-L6-v2"
+    )
+
     return Settings(
         llm_provider=os.getenv("LLM_PROVIDER", "gemini"),
         model_name=os.getenv("LLM_MODEL", "gemini-2.5-flash"),
@@ -119,7 +131,9 @@ def load_settings(project_dir: Path | None = None) -> Settings:
         ollama_base_url=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"),
         custom_llm_api_key=os.getenv("CUSTOM_LLM_API_KEY"),
         custom_llm_base_url=os.getenv("CUSTOM_LLM_BASE_URL"),
-        embedding_model="sentence-transformers/all-MiniLM-L6-v2",
+        embedding_provider=embedding_provider,
+        embedding_model=os.getenv("EMBEDDING_MODEL", default_embedding_model),
+        embedding_dimensions=int(os.getenv("EMBEDDING_DIMENSIONS", "768")),
         baseline_collection_name="papers-baseline",
         corrupted_collection_name="papers-corrupted",
         repaired_collection_name="papers-repaired",

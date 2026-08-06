@@ -1,0 +1,15 @@
+{
+  "report_name": "baseline_quality",
+  "total_rows": 100,
+  "null_counts": {
+    "paper_id": 0,
+    "title": 0,
+    "summary": 0,
+    "published": 0
+  },
+  "duplicate_paper_ids": 0,
+  "max_age_days": 175.0,
+  "stale_rows_count": 0,
+  "stale_ratio": 0.0,
+  "is_healthy": true
+}
