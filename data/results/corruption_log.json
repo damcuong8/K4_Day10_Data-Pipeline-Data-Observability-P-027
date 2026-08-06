@@ -1,0 +1,206 @@
+[
+  {
+    "action": "DROP_LATEST",
+    "paper_id": "10.1002/widm.70122",
+    "before": "Exists",
+    "after": "Dropped"
+  },
+  {
+    "action": "DROP_LATEST",
+    "paper_id": "10.2118/234689-pa",
+    "before": "Exists",
+    "after": "Dropped"
+  },
+  {
+    "action": "DROP_LATEST",
+    "paper_id": "10.3390/diagnostics16152456",
+    "before": "Exists",
+    "after": "Dropped"
+  },
+  {
+    "action": "DROP_LATEST",
+    "paper_id": "10.2196/90046",
+    "before": "Exists",
+    "after": "Dropped"
+  },
+  {
+    "action": "DROP_LATEST",
+    "paper_id": "10.55041/ijcope.v2i7.255",
+    "before": "Exists",
+    "after": "Dropped"
+  },
+  {
+    "action": "DROP_LATEST",
+    "paper_id": "10.52589/bjcnit-2mvxuyxk",
+    "before": "Exists",
+    "after": "Dropped"
+  },
+  {
+    "action": "DROP_LATEST",
+    "paper_id": "10.3389/fmtec.2026.1875357",
+    "before": "Exists",
+    "after": "Dropped"
+  },
+  {
+    "action": "DROP_LATEST",
+    "paper_id": "10.20944/preprints202607.1383.v1",
+    "before": "Exists",
+    "after": "Dropped"
+  },
+  {
+    "action": "DROP_LATEST",
+    "paper_id": "10.26798/jiss.v5i1.2810",
+    "before": "Exists",
+    "after": "Dropped"
+  },
+  {
+    "action": "DROP_LATEST",
+    "paper_id": "10.21203/rs.3.rs-10368581/v1",
+    "before": "Exists",
+    "after": "Dropped"
+  },
+  {
+    "action": "BLANK_SUMMARY",
+    "paper_id": "10.1007/s11044-026-10164-7",
+    "before": "Abstract Large Language Models (LLMs) are tools that have become indispensable in development and programming. However, they suffer from hallucinations, especially when dealing with unknown knowledge. This is particularly the case when LLMs are to be used to support closed-source software applications. Retrieval-Augmented Generation (RAG) offers an approach to use additional knowledge alongside the pre-trained knowledge of the LLM to respond to user prompts. Possible tasks range from a smart-autocomplete, text extraction for question answering, model summarization, component explaining, compositional reasoning, to creation of simulation components and complete input models. This work tests existing RAG systems for closed-source simulation frameworks, in our case the mesh-free simulation software Pasimodo. Since data protection and intellectual property rights are particularly important for problems solved with closed-source software, the tests focus on execution using local LLMs. In order to enable smaller institutions to use the systems, smaller language models will be tested first. The systems show impressive results, but often fail due to insufficient information. Different approaches for improving response quality are tested. In particular, tailoring the information provided to the LLMs dependent to the prompts proves to be a significant improvement. This demonstrates the great potential and the further work needed to improve information retrieval for closed-source simulation models.",
+    "after": ""
+  },
+  {
+    "action": "BLANK_SUMMARY",
+    "paper_id": "10.62775/edukasia.v7i1.2141",
+    "before": "This study systematically examines hallucination phenomena in Large Language Models (LLMs), focusing on their characteristics, causal factors, and mitigation strategies through Retrieval-Augmented Generation (RAG) and low-code orchestration platforms such as n8n. Using a Systematic Literature Review (SLR) approach based on PRISMA 2020 guidelines, this study analysed 40 peer-reviewed articles published between 2020 and 2025 from major scientific databases. The findings reveal that hallucinations are multidimensional, consisting of factual, semantic, and contextual hallucinations influenced by static training data, probabilistic token prediction, prompt ambiguity, and insufficient validation mechanisms. The review further demonstrates that RAG significantly improves factual accuracy by integrating external retrieval systems with LLM generation processes. Recent innovations such as Hybrid Retrieval and GraphRAG enhance contextual relevance and knowledge representation. A major finding of this study is the identification of “Conflict of Information” between external retrieved data and internal LLM knowledge in automated RAG pipelines. Furthermore, this study proposes a novel conceptual framework and taxonomy for hallucination mitigation in low-code AI environments, integrating retrieval, validation, conflict resolution, and workflow orchestration mechanisms. These findings contribute to the development of more reliable, transparent, and scalable AI systems.",
+    "after": ""
+  },
+  {
+    "action": "BLANK_SUMMARY",
+    "paper_id": "10.63363/aijfr.2026.v07i03.5930",
+    "before": "This paper introduces a conversational medical assistance system that integrates a Large Language Model with retrieval-based grounding mechanisms to provide structured, non-diagnostic health guidance. Unlike conventional symptom checkers that rely on rigid decision trees, the proposed system dynamically interprets user queries, retrieves evidence-backed medical information from curated sources, and synthesizes contextual recommendations. The assistant generates medication suggestions, dosage information, safety precautions, lifestyle advice, and nearby pharmacy references. By incorporating Retrieval-Augmented Generation (RAG), the architecture reduces hallucinated responses and enhances factual alignment. Experimental validation across common minor conditions demonstrates improved contextual coherence and structured output reliability. The system is designed with a modular architecture that separates natural language processing, knowledge retrieval, and response generation layers to ensure scalability and maintainability. The retrieval module leverages indexed medical datasets and trusted clinical references to fetch relevant information in real time, while the language model refines this information into clear, user-friendly explanations. The interface supports conversational interaction, enabling users to ask follow-up questions and receive context-aware responses without repeating prior information. Furthermore, safety constraints are embedded within the system to prevent diagnostic claims and to encourage users to seek professional medical consultation when necessary. Performance evaluation metrics such as response accuracy, contextual relevance, and information completeness indicate that the integrated approach provides more reliable and interpretable outputs compared to standalone generative systems. This framework highlights the potential of combining modern AI language models with validated knowledge sources to develop responsible and practical digital health assistance tools. The proposed solution emphasizes interpretability and transparency as key design priorities, ensuring that users can easily understand the reasoning behind generated responses. By structuring outputs into clearly defined informational segments, the system minimizes ambiguity and promotes clarity in health-related communication. The conversational interface is also designed to accommodate natural language variations, allowing individuals to describe symptoms using everyday expressions without requiring technical medical vocabulary. This capability enhances accessibility for users from diverse backgrounds and improves overall usability of the platform. Moreover, the integration of retrieval-grounded generation establishes a balance between linguistic flexibility and factual reliability, which is essential in domains where informational accuracy is critical. The architecture demonstrates how modern AI systems can be adapted to provide supportive guidance while respecting safety boundaries and ethical considerations. As advancements in medical datasets, language modeling techniques, and retrieval optimization continue, such hybrid systems are expected to evolve into increasingly dependable digital tools capable of assisting users in making informed health-related decisions while complementing, rather than replacing, professional medical services.",
+    "after": ""
+  },
+  {
+    "action": "BLANK_SUMMARY",
+    "paper_id": "10.21203/rs.3.rs-10178277/v1",
+    "before": "Abstract Time-series foundation models and retrieval-based augmentation have recently emerged as relevant tools for financial forecasting, yet it remains unclear when explicit historical retrieval helps a pre-trained probabilistic forecaster in noisy equity settings. This study evaluates that question through Cross-Market Retrieval-Augmented Lag-Llama (CM-RAF-Lag-Llama), a controlled framework for comparing Lag-Llama-only forecasts with retrieval-augmented forecasts across emerging and developed market panels. The main validation uses three balanced seven-asset panels, IDX7, US7, and JP7, producing a 48-configuration panel-context-horizon grid across four context lengths and four prediction horizons. The hybrid system retrieves analogous historical windows from an indexed memory and blends the retrieved continuation with the Lag-Llama forecast while preserving the same forecasting backbone. In the same-backbone return validation, at least one retrieval variant reduces Lag-Llama MSE in all 48 configurations, with aggregate lower-error retrieval MSE reductions of 28.85\\% for IDX7, 27.27\\% for US7, and 33.60\\% for JP7. A second OHLCV-derived stock-feature experiment evaluates log-price, log-volume, range-volatility, and 20-day realized-volatility targets across 72 matched configurations. In that experiment, validation-selected RAF reduces MSE relative to Lag-Llama-only in 68 of 72 configurations and records the lowest MSE among the compared systems in 22 configurations, including 17 of 18 non-log-price US7 settings. A mechanism-level single-series ablation further compares Lag-Llama-only against Lag-Llama + RAF under zero-shot and scheduler-based inference, showing that retrieval effects are horizon-sensitive. The results indicate that retrieval can serve as an external-memory correction for Lag-Llama under selected equity targets, especially when volatility or volume structure provides reusable historical analogs.",
+    "after": ""
+  },
+  {
+    "action": "BLANK_SUMMARY",
+    "paper_id": "10.3390/s26062006",
+    "before": "Urban rail transit (URT) train-door failures are safety-critical and can cause cascading service disruptions, yet existing emergency operation schemes (EOSs) are often static, difficult to adapt to evolving fault patterns, and hard to verify against updated regulations. This study proposes a retrieval-augmented large language model (LLM) framework for executable and evidence-traceable EOS generation. Multi-source heterogeneous incident evidence (structured work orders, operational impact records, and unstructured maintenance/dispatch narratives) is normalized into a structured incident representation, and a hybrid retriever (dense + BM25) with cross-encoder reranking selects compact regulatory clauses and historical cases under a fixed context budget. The generator is fine-tuned with structured objectives to enforce schema compliance, role assignment, and citation grounding. Experiments on 776 passenger-door incidents from Shanghai URT (2019–2024) show that Hybrid + rerank achieves the best retrieval quality (Recall@5 = 0.78; Coverage@B = 0.71; FirstHit/B = 0.46). For generation, the full setting improves operational usability, reaching SchemaPass = 0.88, RoleAcc = 0.91, CiteCov = 0.73, and UsableAns = 0.83, compared with 0.15 UsableAns for a pure LLM baseline and 0.26 for prompting with RAG only. These results indicate that combining high-utility retrieval with structure- and citation-aware fine-tuning substantially improves the executability and verifiability of safety-critical operation schemes.",
+    "after": ""
+  },
+  {
+    "action": "BLANK_SUMMARY",
+    "paper_id": "10.63503/j.ijaimd.2026.233",
+    "before": "The Retrieval-Augmented Generation (RAG) paradigm has been proposed as a potent concept that would increase the factual accuracy, reliability, and adaptability of Large Language Models (LLMs) by incorporating external information retrieval and text generation. In comparison to an independent LLM, which leverages solely parametric knowledge, RAG dynamically accesses non-parametric knowledge sources during inference that are up-to-date and are founded on the evidence that was accessed to generate the response. This paper summarizes the foundations of RAG, its architecture, major components (retriever and generator) and an indexing-retrieval-generation methodology. It critically examines retrieval strategies in which sparse, dense and hybrid retrieval are examined with their efficiency trade-offs, semantic insight, interpretability and application to domain-specific tasks including healthcare. The paper further compares RAG with fine-tuning and brings out the differences in updating knowledge, customization and hallucination reduction. Finally, the augmentation strategies, the higher-level techniques iterative, recursive and adaptive retrieval are discussed to solve the complex, multi-step reasoning tasks. In summary, the paper reveals that RAG is a scalable and powerful AI-based solution that is knowledge-intensive.",
+    "after": ""
+  },
+  {
+    "action": "BLANK_SUMMARY",
+    "paper_id": "10.33140/adci.02.01.17",
+    "before": "In recent years, the integration of Natural Language Processing (NLP) with web scraping techniques has enabled intelligent automated systems that can improve user engagement and operational efficiency in educational institutions. This paper presents a novel approach to automate the admission inquiry and booking process for universities by extracting relevant course and fee information from official documents and dynamically scraping contact details from the university website. The system leverages transformer-based models for question answering (QA) on admission brochures and utilizes WhatsApp web URL schemes to facilitate direct communication between prospective students and admission offices. This approach significantly reduces manual intervention, enhances user experience, and streamlines the admission workflow.",
+    "after": ""
+  },
+  {
+    "action": "BLANK_SUMMARY",
+    "paper_id": "10.14293/pr2199.003853.v1",
+    "before": "The evolution of large language models (LLMs) from passive text generators to autonomous agents capable of invoking external tools, accessing databases, executing code, and interacting with digital environments has significantly expanded their practical utility across diverse domains. While tool-calling architectures enhance problem-solving capabilities and enable dynamic decision-making, they also introduce complex governance and accountability challenges that extend beyond traditional concerns associated with standalone LLMs. Autonomous agents can perform multi-step actions with limited human intervention, creating new risks related to transparency, responsibility attribution, security vulnerabilities, privacy violations, and unintended consequences. This paper critically examines the governance implications of tool-calling LLM agents, focusing on the tension between increased autonomy and the need for effective oversight. The study explores key accountability issues, including decision traceability, auditability, explainability, human-in-the-loop control, regulatory compliance, and liability allocation among developers, deployers, and end users. Furthermore, it analyzes emerging governance frameworks and technical safeguards designed to ensure trustworthy agent behavior in high-stakes environments such as healthcare, finance, cybersecurity, and public administration. The paper argues that existing governance mechanisms developed for conventional AI systems are insufficient to address the operational complexity of autonomous tool-using agents. A multidimensional governance approach integrating technical controls, organizational policies, ethical principles, and regulatory standards is therefore proposed. The findings contribute to ongoing discussions on responsible AI deployment by highlighting pathways for balancing innovation, autonomy, and accountability in next-generation intelligent systems.",
+    "after": ""
+  },
+  {
+    "action": "BLANK_SUMMARY",
+    "paper_id": "10.1148/radiol.251581",
+    "before": "A large language model pipeline automatically summarized oncologic histories with high efficiency, accuracy, and completeness; speed and performance varied depending on the model used (GPT-4o mini, o3-mini, GPT-5-mini [OpenAI]).",
+    "after": ""
+  },
+  {
+    "action": "INJECT_NOISE",
+    "paper_id": "10.38124/ijisrt/26may1714",
+    "before": "LegalMind: A Multi-Agent Legal Reasoning Framework Leveraging Fine-Tuning of Large Language Models and Retrieval-Augmented Generation to Reduce Hallucinations",
+    "after": "LegalMind: A Multi-Agent Legal Reasoning Framework Leveraging Fine-Tuning of Large Language Models and Retrieval-Augmented Generation to Reduce Hallucinations [IRRELEVANT NOISE DATA CORRUPTION]"
+  },
+  {
+    "action": "INJECT_NOISE",
+    "paper_id": "10.36713/epra27876",
+    "before": "AN INTELLIGENT FOLDER-BASED DOCUMENT CONVERSATIONAL SYSTEM USING LARGE LANGUAGE MODELS AND RETRIEVAL-AUGMENTED GENERATION",
+    "after": "AN INTELLIGENT FOLDER-BASED DOCUMENT CONVERSATIONAL SYSTEM USING LARGE LANGUAGE MODELS AND RETRIEVAL-AUGMENTED GENERATION [IRRELEVANT NOISE DATA CORRUPTION]"
+  },
+  {
+    "action": "INJECT_NOISE",
+    "paper_id": "10.21203/rs.3.rs-9741159/v1",
+    "before": "Retrieval-Augmented Large Language Models for Clinical Decision Support: A Systematic Review of Hallucination Mitigation and Evidence Grounding",
+    "after": "Retrieval-Augmented Large Language Models for Clinical Decision Support: A Systematic Review of Hallucination Mitigation and Evidence Grounding [IRRELEVANT NOISE DATA CORRUPTION]"
+  },
+  {
+    "action": "INJECT_NOISE",
+    "paper_id": "10.20944/preprints202604.0339.v1",
+    "before": "Retrieval-Augmented Large Language Model Agents for Automated Scientific Literature Review Generation",
+    "after": "Retrieval-Augmented Large Language Model Agents for Automated Scientific Literature Review Generation [IRRELEVANT NOISE DATA CORRUPTION]"
+  },
+  {
+    "action": "TRUNCATE_TITLE",
+    "paper_id": "10.63646/kpqm1958",
+    "before": "The Age of Autonomous Agents: A Bibliometric Review of Agentic AI Architectures, Applications, and Emerging Challenges",
+    "after": "The Age of"
+  },
+  {
+    "action": "TRUNCATE_TITLE",
+    "paper_id": "10.55041/ijsrem61473",
+    "before": "Real-Time Fact-Checking using Retrieval-Augmented Generation and Large Language Models",
+    "after": "Real-Time "
+  },
+  {
+    "action": "TRUNCATE_TITLE",
+    "paper_id": "10.32473/flairs.39.1.141782",
+    "before": "An Exploratory Study of Agentic Retrieval Augmented Generation for Mental Health Oriented Language Models",
+    "after": "An Explora"
+  },
+  {
+    "action": "TRUNCATE_TITLE",
+    "paper_id": "10.64898/2026.04.18.719404",
+    "before": "Benchmarking Agentic Large Language Models for Complex Protein-Set Functional Annotation",
+    "after": "Benchmarki"
+  },
+  {
+    "action": "STALE_DATE",
+    "paper_id": "10.1055/a-2838-5446",
+    "before": 128,
+    "after": 1128
+  },
+  {
+    "action": "STALE_DATE",
+    "paper_id": "10.1093/sleep/zsag091.0346",
+    "before": 90,
+    "after": 1090
+  },
+  {
+    "action": "STALE_DATE",
+    "paper_id": "10.29121/shodhkosh.v7.i7s.2026.7928",
+    "before": 93,
+    "after": 1093
+  },
+  {
+    "action": "STALE_DATE",
+    "paper_id": "10.1145/3805774",
+    "before": 83,
+    "after": 1083
+  },
+  {
+    "action": "DUPLICATE_ROW",
+    "paper_id": "10.1038/s41746-026-02944-4",
+    "before": "Single",
+    "after": "Duplicated"
+  },
+  {
+    "action": "DUPLICATE_ROW",
+    "paper_id": "10.36713/epra26155",
+    "before": "Single",
+    "after": "Duplicated"
+  },
+  {
+    "action": "DUPLICATE_ROW",
+    "paper_id": "10.1145/3805774",
+    "before": "Single",
+    "after": "Duplicated"
+  }
+]
